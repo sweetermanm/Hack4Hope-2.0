@@ -3,16 +3,18 @@ package easy;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.jasper.tagplugins.jstl.core.Out;
+
 public class onejavaToRuleThemAll {
 	static List<User> ulist = new ArrayList<User>();
 	static List<Post> plist = new ArrayList<Post>();
 	static List<Comment> clist = new ArrayList<Comment>();
 
-	public static String addu(String inemail, String inusername,String infname, String inlname, String inpassword,  String indob ) {
+	public static List<User> addu(String inemail, String inusername,String infname, String inlname, String inpassword,  String indob ) {
 		User u = new User(inemail,inusername,infname,inlname,inpassword,indob,false,false);
 		ulist.add(u);
 		
-		return"";
+		return ulist;
 	}
 	public static String addp(String intitle, String incontent) {
 		Post p = new Post(intitle, incontent);

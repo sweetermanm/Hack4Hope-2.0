@@ -2,6 +2,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%Class.forName("com.mysql.jdbc.Driver");%>
+<%@page import = "java.util.*" %>
+<%@page import = "easy.Post" %>
 <html>
 <head>
 <style>
@@ -29,10 +32,28 @@ padding: 20px;
 <body background = "Gray.jpg">
 
 <p> Hello World</p>
+<% List<Post> plist = new ArrayList<Post>(); %>
+<%plist = easy.Queries.printPosts(); %>
 
+<br>
+<br>
+<br>
 Just testing
 All this stufff out 
 you know how it goes
 <%= easy.onejavaToRuleThemAll.displayu("j") %>
+<br>
+<br>
+<br>
+
+<%for(int i = 0; i < plist.size();i++){
+	
+	out.println(plist.get(i).getcon());
+	out.println("\n");
+	out.println();
+	out.print("                                                                        ");
+	}%>
+
+
 </body>
 </html>

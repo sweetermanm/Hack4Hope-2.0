@@ -32,8 +32,10 @@ Welcome to the post page.
 Post a message to the forum here!.
 
 <form action="callingdb(postPage).jsp" method="get">
+Username: <input type="text" name="Username"><br>
 postTitle: <input type ="text" name ="PostTitle"><br>
 Postcontent: <input type="text" name="Postcontent"><br>
+
 <p>
 <br>
 <input type="submit">

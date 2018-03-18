@@ -52,6 +52,12 @@ public class Post
 		return username; 
 		
 	}
+	public String getcon() {
+		return content; 
+		
+	}
+	
+	
 	public String Populate() {
 		
 		

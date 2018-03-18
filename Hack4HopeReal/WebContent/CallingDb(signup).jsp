@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%Class.forName("com.mysql.jdbc.Driver");%>
+<%@ page import = "java.util.*" %>
+<%@page import = "easy.User" %>
 <html>
 <head>
 <style>
@@ -34,15 +37,34 @@ padding: 20px;
 %>
 
 
-<%easy.onejavaToRuleThemAll.addu(email,username,firstName,lastname,dob,pass); %>
+<%//final static List<User>// list = new ArrayList<User>();   %>
+<% List<User> list = new ArrayList<User>(); %>
+<%  %>
+<%easy.call.insertUsers(username,firstName,lastname,dob,pass,email); %>
+<%list = easy.Queries.printUsers(); %>
+
+<br>
+<br>
+
+
 <h1>Hello, <%=firstName%>  <%=lastname %>Welcome to the Hack4Hope Forum! </h1>
 	Your username is <%=username %>
+	<br>
+	<br>
 	
  <% for(int i = 0; i < 10; i ++){
 	 out.println("Coming sonn "); 
 	 
 	 }%>
-
- 
+<br>
+<br>
+<br>
+ <%list.get(0); %>
+<%for(int i = 0; i < list.size();i++){
+	out.print(list.get(i).getuser());	
+	out.println();
+}	%>
+<br>
+<br>
 </body>
 </html>

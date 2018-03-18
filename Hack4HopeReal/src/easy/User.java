@@ -35,6 +35,20 @@ public class User
 		email = inemail; 
 		
 	}
+	public User( String inusername,String infname, String inlname, String inpassword,String inemail,   boolean intype, boolean inadmin)
+	{
+		
+		
+		username = inusername; 
+		fname = infname; 
+		lname = inlname; 
+		password = inpassword; 
+		dob = ""; 
+		type = intype; 
+		admin = inadmin;
+		email = inemail; 
+		
+	}
 	//Getter and Setter Methods
 	public void setuser(String inuser) {
 		username = inuser; 
