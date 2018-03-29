@@ -32,8 +32,17 @@ padding: 20px;
 <body background = "Gray.jpg">
 
 <p> Hello World</p>
-<% List<Post> plist = new ArrayList<Post>(); %>
-<%plist = easy.Queries.printPosts(); %>
+<%
+ 
+
+		
+	List<Post> plist = new ArrayList<Post>(); 
+	plist = easy.Queries.printPosts();
+	
+ easy.onejavaToRuleThemAll.track(true);
+
+ 
+ %>
 
 <br>
 <br>
@@ -46,13 +55,24 @@ you know how it goes
 <br>
 <br>
 
-<%for(int i = 0; i < plist.size();i++){
+
+<% 
+
+
+
+for(int i = 0; i < plist.size();i++){
 	
 	out.println(plist.get(i).getcon());
 	out.println("\n");
 	out.println();
-	out.print("                                                                        ");
-	}%>
+	out.print("<br>");
+	out.println();
+	out.print("<br>");
+	
+	}
+	
+	
+%>
 
 
 </body>

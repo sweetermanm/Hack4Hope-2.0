@@ -1,76 +1,45 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-    <html>
-    <style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<style>
+a{
+border:1px solid slategray;
+background-color: lightgray;
+color: black;
+margin:75px;
+padding: 20px;
+}
+</style>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Login Page</title>
 
-    a{
-    border:1px solid black;
-    background-color: lightgray;
-    color: black;
-    margin:60px;
-    padding: 20px;
-     }
-     body{
-       text-align: center;
-       font-family: arial;
-       background-color: #e6e9e9;
-       margin: 0 auto;
-       padding: 2em 2em 4em;
-     }
-     h1{
-       padding-bottom: 0px;
-       color: #4A55AF;
-    }
-     ul {
-         list-style-type: none;
-         margin: 0;
-         padding: 0;
-         overflow: hidden;
-         border: 5px solid #4A55AF;
-     }
+<a href="PostPage.jsp" ;>Post Page</a>
+<a href="HomePage.jsp" >Home Page</a>
+<img src="h4h.png"  float:right;float:left;width="100" height="100">
 
-     li {
-         float: left;
-     }
+<a href="LogInPage.jsp">Login Page</a>
+<a href="SignupPage.jsp">SignUp Page</a>
+</head>
 
-     li a {
-         display: block;
-         color: black;
-         text-align: center;
-         padding: 16px;
-         text-decoration: none;
-     }
+<body background = "Gray.jpg">
+<br>
+<br>
+<br>
 
-     li a:hover {
-         background-color: slategray;
-     }
+<form action="Callingdb(login).jsp" method="get">
+Username: &nbsp; <input type ="text" name ="username"><br>
+<br>
+Password: &nbsp; <input type="text" name="pass"><br>
+<p>
+<br>
+<input type="submit">
+</form>
 
-    </style>
-    <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Login Page</title>
-    </head>
 
-    <body>
-      <h1>HACK4HOPE</h1>
 
-    <br>
-    <br>
-    <br>
 
-    <form action="Callingdb(login).jsp" method="get">
-    Username: &nbsp; <input type ="text" name ="username"><br>
-    <br>
-    Password: &nbsp; <input type="text" name="pass"><br>
-    <br>
-    <input type="submit">
-    <p>
-    <ul>
-      <li><a href="HomePage.jsp" >Home Page</a></li>
-      <li><a href="PostPage.jsp">Discussion Forum</a></li>
-      <li><a href="LogInPage.jsp">Login Page</a></li>
-      <li><a href="SignupPage.jsp">SignUp Page</a></li>
-    </ul>
-    </p>
-    </form>
+
+</body>
+</html>

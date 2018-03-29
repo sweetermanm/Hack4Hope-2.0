@@ -9,7 +9,8 @@ public class onejavaToRuleThemAll {
 	static List<User> ulist = new ArrayList<User>();
 	static List<Post> plist = new ArrayList<Post>();
 	static List<Comment> clist = new ArrayList<Comment>();
-
+	static boolean track = false; 
+	
 	public static List<User> addu(String inemail, String inusername,String infname, String inlname, String inpassword,  String indob ) {
 		User u = new User(inemail,inusername,infname,inlname,inpassword,indob,false,false);
 		ulist.add(u);
@@ -44,4 +45,16 @@ public class onejavaToRuleThemAll {
 		}
 		return"";
 	}
-}
+	public static boolean track(boolean lol) {
+		track = lol;
+		return track;
+		
+		}
+	
+	public static boolean gettrack() {
+		return track; 
+		
+		
+	}
+	}
+

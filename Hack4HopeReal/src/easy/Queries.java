@@ -8,7 +8,7 @@ public class Queries {
 	private static Connection conn; 
 	static List<User> ulist = new ArrayList<User>();
 	static List<Post> plist = new ArrayList<Post>();
-	
+	static int track = 0;
 	public static void main(String args[]) {
 		printUsers();
 		printPosts();
@@ -88,7 +88,21 @@ public static List<Post> printPosts()
 	} 
 	closeConnection();
 	
-	
+	track++;
 	return plist;
 	}
+
+
+public static String gettrack() {
+	if(track == 0) {
+		return "";
+	}
+	else {
+		
+		return "Test";
+	}
+	
 }
+
+}
+
