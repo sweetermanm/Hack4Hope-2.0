@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>H4H</title>
+    </head>
+    <body>
+        <form action="Callingdb(login).jsp" method="get">
+	<div>
+		<label>Username: &nbsp;</label>
+		<input type="text" name="username">
+	</div>
+	
+	<div>
+		<label>Password: &nbsp;</label>
+		<input type="text" name="pass">
+	</div>
+<br>
+<input type="submit">
+</form>
+    
+    <%
+string loggedIn = request.getParameter("name");
+cookie theCookie = new cookie("myApp.name"), loggedIn);
+theCookie.setMaxAge(60*60);
+//total seconds 1hour
+response.addCookie(theCookie);
+cookie[] theCookies =request.getCookies();
+if (theCookies !=null){
+for (Cookie tempCookie: the Cookies){
+if ("myApp.name".equals(tempCookies.getName())){
+loggedIn= tempCookie.getValue();
+break;
+       %>
+</body>
+}
+}
+}
+</html>
