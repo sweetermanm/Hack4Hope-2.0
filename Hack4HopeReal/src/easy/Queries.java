@@ -88,7 +88,6 @@ public static List<Post> printPosts()
 	} 
 	closeConnection();
 	
-	track++;
 	return plist;
 	}
 

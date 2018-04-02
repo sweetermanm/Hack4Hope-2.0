@@ -17,7 +17,7 @@ padding: 20px;
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Your Post has been Posted</title>
-<a href="PostPage.jsp" ;>Post Page</a>
+<a href="PostPage.jsp" >Post Page</a>
 <a href="HomePage.jsp" >Home Page</a>
 <img src="h4h.png"  float:right;float:left;width="100" height="100">
 

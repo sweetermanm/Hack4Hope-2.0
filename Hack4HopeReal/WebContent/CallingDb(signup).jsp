@@ -60,9 +60,25 @@ padding: 20px;
 <br>
 <br>
  <%list.get(0); %>
+ <%//Please work 
+	String testing = "Commenting.jsp"; 
+ 	String viewing = "Viewcomments.jsp";
+ 
+ %>
 <%for(int i = 0; i < list.size();i++){
+	
+	
+	
 	out.print(list.get(i).getuser());	
-	out.println();
+	out.println("<a href= testing >Comment on this post </a>");
+	out.println("<a href= viewing >View all comments </a>");
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<br>");
+	
+
+	
+	
 }	%>
 <br>
 <br>

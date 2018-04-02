@@ -15,6 +15,14 @@ color: black;
 margin:75px;
 padding: 20px;
 }
+d{
+	href = Commenting.jsp;
+	
+	
+
+
+}
+
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Hack4Hope Home Pagetitle </title>
@@ -30,7 +38,9 @@ padding: 20px;
 <br>
 <%//Created By Nick Stone %>
 <body background = "Gray.jpg">
-
+<d>
+please for the love of god work
+</d>
 <p> Hello World</p>
 <%
  
@@ -55,7 +65,13 @@ you know how it goes
 <br>
 <br>
 
+<%//This works... Cant believe it does. Dont want to gloat but i am very good 
+// at coding 
+String testing = "Commenting.jsp";
+String viewing = "Viewcomments.jsp";
 
+
+%>
 <% 
 
 
@@ -63,11 +79,11 @@ you know how it goes
 for(int i = 0; i < plist.size();i++){
 	
 	out.println(plist.get(i).getcon());
-	out.println("\n");
-	out.println();
-	out.print("<br>");
-	out.println();
-	out.print("<br>");
+	out.println("<a href= testing >Comment on this post </a>");
+	out.println("<a href= viewing >View all comments </a>");
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<br>");
 	
 	}
 	
