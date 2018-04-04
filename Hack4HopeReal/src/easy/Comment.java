@@ -27,44 +27,51 @@ public class Comment {
 		
 		
 	}
-	private void setpid(int inpost) {
+	public void setpid(int inpost) {
 		postID = inpost; 
 		
 	}
 	
-	private void setuse(int inuse) {
+	public void setuse(int inuse) {
 		useful = inuse; 
 		
 	}
 	
-	private void setrep(boolean inrep) {
+	public void setrep(boolean inrep) {
 		report = inrep; 
 		
 	}
-	private void setuser(String inuse) {
+	public void setuser(String inuse) {
 		username = inuse; 
 		
 		
 	}
-	private int getuse() {
+	public int getuse() {
 		return useful; 
 		
 	}
 	
-	private boolean getrep() {
+	public boolean getrep() {
 		return report; 
 		
 	}
-	private String getuser() {
+	public String getuser() {
 		return username; 
 		
 	}
 	
-	private int getpid() {
+	public int getpid() {
 		return postID; 
 		
 	}
-	
+
+	public String getcon()
+	{
+		
+		return content; 
+		
+		
+	}
 	
 	
 	

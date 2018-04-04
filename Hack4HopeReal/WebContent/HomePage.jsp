@@ -79,8 +79,8 @@ String viewing = "Viewcomments.jsp";
 for(int i = 0; i < plist.size();i++){
 	
 	out.println(plist.get(i).getcon());
-	out.println("<a href= testing >Comment on this post </a>");
-	out.println("<a href= viewing >View all comments </a>");
+	out.println("<a href= Commenting.jsp >Comment on this post </a>");
+	out.println("<a href= Viewcomments.jsp >View all comments </a>");
 	out.println("<br>");
 	out.println("<br>");
 	out.println("<br>");
