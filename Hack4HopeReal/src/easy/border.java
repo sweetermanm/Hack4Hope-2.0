@@ -1,6 +1,6 @@
 package easy;
 
-public class border {
+public class border { 
 
 	public static String uh() {
 		// TODO Auto-generated method stub

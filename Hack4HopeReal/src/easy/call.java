@@ -9,7 +9,7 @@ public class call {
 
 private static Connection conn;
 
- 
+
 
 public static void main(String[] args) {
 
@@ -28,7 +28,7 @@ authenticate("krummenachere", "myPass");
 System.out.println("worked");
 }
 
- 
+
 
 public static void connectToDB() {
 
@@ -44,7 +44,7 @@ String user      = "eogotwa_EmmaK";
 
 String password  = "Password01";
 
-   
+
 
 //create a connection to the database
 
@@ -52,7 +52,7 @@ conn = DriverManager.getConnection(url, user, password);
 
 //System.out.println("worked");
 
-} 
+}
 
 catch(SQLException e) {
 
@@ -62,7 +62,7 @@ System.out.println(e);
 
 }
 
- 
+
 
 public static void closeConnection() {
 
@@ -80,7 +80,7 @@ catch(SQLException ex){
 
 }
 
- 
+
 
 public static String printUsers() {
 
@@ -96,7 +96,7 @@ Statement stmt = conn.createStatement();
 
 ResultSet rs = stmt.executeQuery("SELECT * FROM `eogotwa_h4hProject`.`User`");
 
-users = "Usernames already in use: "; 
+users = "Usernames already in use: ";
 
 //System.out.println(rs);
 
@@ -114,7 +114,7 @@ catch(SQLException e) {
 
 System.out.println(e);
 
-} 
+}
 
 closeConnection();
 
@@ -122,8 +122,8 @@ return users;
 
 }
 
- 
 
+//Create New User
 public static void insertUsers(String username, String fName, String lName, String DOB, String password, String email) {
 
 connectToDB();
@@ -140,7 +140,7 @@ String sql = "INSERT INTO  `eogotwa_h4hProject`.`User` (`Username`, `fName`, "
 
 PreparedStatement preparedInsert = conn.prepareStatement(sql);
 
- 
+
 
 preparedInsert.execute(sql);
 
@@ -150,14 +150,14 @@ catch(SQLException e) {
 
 System.out.println(e);
 
-} 
+}
 
 closeConnection();
 
 }
 
- 
 
+//Create New Posts
 public static void insertPosts(String un, String title, String content) {
 
 connectToDB();
@@ -188,7 +188,7 @@ String sql = "INSERT INTO  `eogotwa_h4hProject`.`Post` (`pUserID`, `title`, `pCo
 
 PreparedStatement preparedInsert = conn.prepareStatement(sql);
 
- 
+
 
 preparedInsert.execute(sql);
 
@@ -198,14 +198,14 @@ catch(SQLException e) {
 
 System.out.println(e);
 
-} 
+}
 
 closeConnection();
 
 }
 
- 
 
+//Creates New Comments
 public static void insertComments(String un, int pID, String content) {
 
 connectToDB();
@@ -226,7 +226,7 @@ userID = (rs.getString("ID"));
 
 }
 
-   
+
 
 String sql = "INSERT INTO  `eogotwa_h4hProject`.`Comment` (`cUserID`, `cPostID`, `cContent`)"
 
@@ -234,7 +234,7 @@ String sql = "INSERT INTO  `eogotwa_h4hProject`.`Comment` (`cUserID`, `cPostID`,
 
 PreparedStatement preparedInsert = conn.prepareStatement(sql);
 
- 
+
 
 preparedInsert.execute(sql);
 
@@ -244,12 +244,13 @@ catch(SQLException e) {
 
 System.out.println(e);
 
-} 
+}
 
 closeConnection();
 
 }
 
+//Deletes User
 public static void deleteUser(String un) {
 
 connectToDB();
@@ -264,7 +265,7 @@ String sql = "DELETE FROM  `eogotwa_h4hProject`.`User` WHERE `User`.`ID` = " + i
 
 PreparedStatement preparedInsert = conn.prepareStatement(sql);
 
- 
+
 
 preparedInsert.execute(sql);
 
@@ -274,12 +275,14 @@ catch(SQLException e) {
 
 System.out.println(e);
 
-} 
+}
 
 closeConnection();
 
 }
 
+
+//Deletes Post
 public static void deletePost(int pID) {
 
 connectToDB();
@@ -290,7 +293,7 @@ String sql = "DELETE FROM  `eogotwa_h4hProject`.`Post` WHERE `Post`.`postID` = "
 
 PreparedStatement preparedInsert = conn.prepareStatement(sql);
 
- 
+
 
 preparedInsert.execute(sql);
 
@@ -300,12 +303,13 @@ catch(SQLException e) {
 
 System.out.println(e);
 
-} 
+}
 
 closeConnection();
 
 }
 
+//Deletes Comments
 public static void deleteComment(int cID) {
 
 connectToDB();
@@ -316,7 +320,7 @@ String sql = "DELETE FROM  `eogotwa_h4hProject`.`Comment` WHERE `Comment`.`comme
 
 PreparedStatement preparedInsert = conn.prepareStatement(sql);
 
- 
+
 
 preparedInsert.execute(sql);
 
@@ -326,7 +330,7 @@ catch(SQLException e) {
 
 System.out.println(e);
 
-} 
+}
 
 closeConnection();
 
@@ -346,7 +350,7 @@ String sql = "UPDATE `eogotwa_h4hProject`.`Post` SET `useful` = '"+ newUseful + 
 
 PreparedStatement preparedInsert = conn.prepareStatement(sql);
 
- 
+
 
 preparedInsert.execute(sql);
 
@@ -356,7 +360,7 @@ catch(SQLException e) {
 
 System.out.println(e);
 
-} 
+}
 
 closeConnection();
 
@@ -376,7 +380,7 @@ String sql = "UPDATE `eogotwa_h4hProject`.`Comment` SET `useful` = '"+ newUseful
 
 PreparedStatement preparedInsert = conn.prepareStatement(sql);
 
- 
+
 
 preparedInsert.execute(sql);
 
@@ -386,7 +390,7 @@ catch(SQLException e) {
 
 System.out.println(e);
 
-} 
+}
 
 closeConnection();
 
