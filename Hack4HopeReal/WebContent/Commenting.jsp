@@ -38,6 +38,7 @@ Will be building view comments soo
 
 
 <form action="theCommenthasbeenpost.jsp" method="get">
+Username <input type = "text" name = "usn"><br>
 PostID  <input type="text" name="PID"><br>
 Commentcontent: <input type="text" name="Commentcontent"><br>
 

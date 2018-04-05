@@ -14,15 +14,15 @@
 
 <%
 //Created By Nick stone 
+  String usn = request.getParameter("usn");
   String title = request.getParameter("PID");
-
+	
   String content = request.getParameter("Commentcontent");
   
   int pid = Integer.valueOf(String.valueOf(title));
 %>
 
-<%easy.call.insertComments("test",pid,content); %>
-
+<%easy.call.insertComments(usn,pid,content); %>
 
 
 

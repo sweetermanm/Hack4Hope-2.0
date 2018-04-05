@@ -47,9 +47,15 @@ please for the love of god work
 
 		
 	List<Post> plist = new ArrayList<Post>(); 
+	 
+	
+
+	
+	plist.clear();
+	
 	plist = easy.Queries.printPosts();
 	
- easy.onejavaToRuleThemAll.track(true);
+ 
 
  
  %>
@@ -60,7 +66,7 @@ please for the love of god work
 Just testing
 All this stufff out 
 you know how it goes
-<%= easy.onejavaToRuleThemAll.displayu("j") %>
+
 <br>
 <br>
 <br>
@@ -73,19 +79,19 @@ String viewing = "Viewcomments.jsp";
 
 %>
 <% 
+	int max = easy.Queries.getNumPosts();
 
-
-
-for(int i = 0; i < plist.size();i++){
 	
+for(int i = 0; i < max;i++){
+
 	out.println(plist.get(i).getcon());
 	out.println("<a href= Commenting.jsp >Comment on this post </a>");
 	out.println("<a href= Viewcomments.jsp >View all comments </a>");
 	out.println("<br>");
 	out.println("<br>");
 	out.println("<br>");
-	
 	}
+	
 	
 	
 %>

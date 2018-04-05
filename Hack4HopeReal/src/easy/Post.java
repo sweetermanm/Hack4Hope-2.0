@@ -11,12 +11,17 @@ public class Post
 	private Timestamp date; 
 	private String title;
 	private String content;
-	
+	private int pid;
 	public Post(String intitle, String incontent) {
 		title = intitle; 
 		content = incontent;
 	}
-	
+	public Post(String intitle, String incontent,int inpid) {
+		title = intitle; 
+		content = incontent;
+		pid = inpid; 
+		
+	}
 	public Post(int inuseful, String inuser, boolean inrep) {
 		useful = inuseful;
 		username = inuser; 

@@ -7,6 +7,7 @@ public class Queries {
 private static Connection conn; 
 static List<User> ulist = new ArrayList<User>();
 static List<Post> plist = new ArrayList<Post>();
+static int count = 0; 
 static List<Comment> clist = new ArrayList<Comment>();
 public static void main(String args[]) {
 //printUsers();
@@ -16,6 +17,7 @@ public static void main(String args[]) {
 //getNumUsefulPost(1);
 //getNumUsefulComment(1);
 getPasswordByUserID(1);
+getNumPosts();
 }
 public static void connectToDB() {
 conn = null;
@@ -44,6 +46,7 @@ catch(SQLException ex){
 }
 public static List<User> printUsers() 
 {
+	
 connectToDB();
 try {
 Statement stmt = conn.createStatement();
@@ -178,5 +181,43 @@ System.out.println(e);
 closeConnection();
 //System.out.println(numUseful);
 return numUseful; 
+}
+
+public static int getNumPosts() {
+	int numPosts = 0;
+	connectToDB();
+	try {
+	Statement stmt = conn.createStatement();
+	ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM `eogotwa_h4hProject`.`Post`");
+	while(rs.next()){
+	numPosts = rs.getInt("total");
+	}
+	}
+	catch(SQLException e) {
+	System.out.println(e);
+	} 
+	closeConnection();
+	
+	System.out.println(numPosts);
+	return numPosts;
+}
+
+public static int getNumCommentPerPost() {
+	int numPosts = 0;
+	connectToDB();
+	try {
+	Statement stmt = conn.createStatement();
+	ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM `eogotwa_h4hProject`.`Post`");
+	while(rs.next()){
+	numPosts = rs.getInt("total");
+	}
+	}
+	catch(SQLException e) {
+	System.out.println(e);
+	} 
+	closeConnection();
+	
+	//System.out.println(numPosts);
+	return numPosts;
 }
 }
