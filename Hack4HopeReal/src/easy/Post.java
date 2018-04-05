@@ -2,9 +2,10 @@ package easy;
 
 //Created by Nick stone 
 //3/4/18
-import java.sql.Timestamp;
-public class Post 
-{
+//comments by Roslyn Davis
+import java.sql.Timestamp;//This adds a timestamp and recognizes this class as a SQL to get the most current timestamp in the post
+public class Post //this class creates the content so you are able to post
+{//these fields are not for the user to see, however, the user is able to see all of the content posted
 	private int useful; 
 	private String username; 
 	private boolean reported; 
