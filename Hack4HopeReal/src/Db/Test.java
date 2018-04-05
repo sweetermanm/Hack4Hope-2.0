@@ -1,6 +1,6 @@
 package Db;
 
-public class Test {//just a test class creates a string to test just returns if program works
+public class Test {
 
 	public static String Test(String name,String in,String lol, String im, String ip,String ik) {
 		

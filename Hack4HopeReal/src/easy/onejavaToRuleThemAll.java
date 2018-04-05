@@ -1,15 +1,14 @@
 package easy;
-//this is the main frame that controls the display throughout the website
 
-import java.util.ArrayList;//imports ArrayList from the library
-import java.util.List;//imports List from the library
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.jasper.tagplugins.jstl.core.Out;
 
-public class onejavaToRuleThemAll {//creates a list that is used throughout the class
-	static List<User> ulist = new ArrayList<User>();//creates a place that will hold users
-	static List<Post> plist = new ArrayList<Post>();//creates a list that will hold all of the posts
-	static List<Comment> clist = new ArrayList<Comment>();//creates a list that will hold all of the comments
+public class onejavaToRuleThemAll {
+	static List<User> ulist = new ArrayList<User>();
+	static List<Post> plist = new ArrayList<Post>();
+	static List<Comment> clist = new ArrayList<Comment>();
 	static boolean track = false; 
 	
 	public static List<User> addu(String inemail, String inusername,String infname, String inlname, String inpassword,  String indob ) {
