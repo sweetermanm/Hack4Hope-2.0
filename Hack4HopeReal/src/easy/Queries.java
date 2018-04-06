@@ -11,7 +11,7 @@ static int count = 0;
 static List<Comment> clist = new ArrayList<Comment>();
 public static void main(String args[]) {
 //printUsers();
-//printPosts();
+printPosts();
 //printComments(1);
 //findUserByUsername("te");
 //getNumUsefulPost(1);
@@ -51,7 +51,7 @@ connectToDB();
 try {
 Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT * FROM `eogotwa_h4hProject`.`User`");
-   
+    ulist.clear();
     while(rs.next()){
    
     User u = new User(rs.getString("username"),rs.getString("fName"),rs.getString("lName"),rs.getString("password"),rs.getString("email"),rs.getBoolean("type"),rs.getBoolean("admin"));
@@ -72,15 +72,15 @@ return ulist;
 public static List<Post> printPosts() 
 {
 connectToDB();
+plist.clear();
 try {
 Statement stmt = conn.createStatement();
 ResultSet rs = stmt.executeQuery("SELECT * FROM `eogotwa_h4hProject`.`Post`");
    
 while(rs.next()){
    
-Post p = new Post(rs.getString("title"),rs.getString("pContent"));
+Post p = new Post(rs.getInt("postID"), rs.getString("title"),rs.getString("pContent"));
 plist.add(p);
-    
 }
 }
 catch(SQLException e) {
@@ -93,6 +93,7 @@ return plist;
 public static List<Comment> printComments(int id) 
 {
 connectToDB();
+clist.clear();
 try {
 Statement stmt = conn.createStatement();
 ResultSet rs = stmt.executeQuery("SELECT u.username, c.cContent FROM `eogotwa_h4hProject`.`Comment` c "

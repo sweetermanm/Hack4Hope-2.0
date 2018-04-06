@@ -16,10 +16,10 @@ public class Post
 		title = intitle; 
 		content = incontent;
 	}
-	public Post(String intitle, String incontent,int inpid) {
+	public Post(int id, String intitle, String incontent) {
 		title = intitle; 
 		content = incontent;
-		pid = inpid; 
+		pid = id; 
 		
 	}
 	public Post(int inuseful, String inuser, boolean inrep) {
@@ -60,6 +60,10 @@ public class Post
 	public String getcon() {
 		return content; 
 		
+	}
+	
+	public int getID() {
+		return pid;
 	}
 	
 	

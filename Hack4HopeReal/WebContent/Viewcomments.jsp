@@ -28,6 +28,10 @@ padding: 20px;
 </head>
 <body background =Gray.jpg>
 
+<br>
+<br>
+<br> 
+<br> 
 
 
 Pulling the query to populate all comments  on a post. SHoudl format nice and 

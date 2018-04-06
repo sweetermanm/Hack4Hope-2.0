@@ -15,13 +15,6 @@ color: black;
 margin:75px;
 padding: 20px;
 }
-d{
-	href = Commenting.jsp;
-	
-	
-
-
-}
 
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -85,11 +78,15 @@ String viewing = "Viewcomments.jsp";
 for(int i = 0; i < max;i++){
 
 	out.println(plist.get(i).getcon());
+	out.println("<Strong>" +  plist.get(i).getID() + "</Strong>");
 	out.println("<a href= Commenting.jsp >Comment on this post </a>");
 	out.println("<a href= Viewcomments.jsp >View all comments </a>");
 	out.println("<br>");
 	out.println("<br>");
 	out.println("<br>");
+	
+	
+	
 	}
 	
 	
