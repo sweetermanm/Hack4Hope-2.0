@@ -43,8 +43,8 @@ Delete <input type="button" onclick = alert("homepage") name="delete"><br>
                window.location="http://localhost:8080/NewProject/HomePage.jsp";
             }
             
-            document.write("You will be redirected to the home page in 10 sec.");
-            setTimeout('Redirect()', 10000);
+            document.write("You will be redirected to the home page in 3 sec.");
+            setTimeout('Redirect()', 3000);
          //-->
       </script>
       
