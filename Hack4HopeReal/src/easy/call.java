@@ -42,7 +42,7 @@ String url       = "jdbc:mysql://66.116.150.183:3306/eogotwa_h4hProject";
 
 String user      = "eogotwa_EmmaK";
 
-String password  = "Password01";
+String password  = "Password02";
 
    
 
@@ -367,6 +367,66 @@ public static void incrementUsefulComment(int cID) {
 int numUseful = Queries.getNumUsefulComment(cID);
 
 int newUseful = numUseful + 1;
+
+connectToDB();
+
+try {
+
+String sql = "UPDATE `eogotwa_h4hProject`.`Comment` SET `useful` = '"+ newUseful + "' WHERE `Comment`.`commentID` = " + cID + ";";
+
+PreparedStatement preparedInsert = conn.prepareStatement(sql);
+
+ 
+
+preparedInsert.execute(sql);
+
+}
+
+catch(SQLException e) {
+
+System.out.println(e);
+
+} 
+
+closeConnection();
+
+}
+
+public static void decrementUsefulPost(int pID) {
+
+int numUseful = Queries.getNumUsefulPost(pID);
+
+int newUseful = numUseful - 1;
+
+connectToDB();
+
+try {
+
+String sql = "UPDATE `eogotwa_h4hProject`.`Post` SET `useful` = '"+ newUseful + "' WHERE `Post`.`postID` = " + pID + ";";
+
+PreparedStatement preparedInsert = conn.prepareStatement(sql);
+
+ 
+
+preparedInsert.execute(sql);
+
+}
+
+catch(SQLException e) {
+
+System.out.println(e);
+
+} 
+
+closeConnection();
+
+}
+
+public static void decrementUsefulComment(int cID) {
+
+int numUseful = Queries.getNumUsefulComment(cID);
+
+int newUseful = numUseful - 1;
 
 connectToDB();
 

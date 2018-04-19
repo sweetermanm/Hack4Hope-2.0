@@ -36,16 +36,16 @@ padding: 20px;
   
   
 %>
+<% String incontent = easy.sortings.vulgarcheck(content);                %>
 
 
-
-<% easy.call.insertPosts(Username, title, content); %>
+<% easy.call.insertPosts(Username, title, incontent); %>
 
 
 <%easy.onejavaToRuleThemAll.addp(title,content); %>
 Hello the post <%=title%> has been posted to the Home Page
 
-Your post was <%=content %>
+Your post was <%=incontent %>
 
 </body>
 </html>

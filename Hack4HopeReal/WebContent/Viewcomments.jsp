@@ -46,11 +46,32 @@ could implement a button pretty easy for useful now that i think about it.
 <%for(int i = 0; i < list.size();i++){
 	
 	
+	%>
+	<br>
 	
+	<br>
+	<br>
+	<a href = "IncrementComment.jsp")>Useful!</a>	
+	<br>
+	<br>
+	<br>
+	<a href = "DecrementComment.jsp")>Not Useful</a>	
+ 	<br>
+ 	
+ 	
+ 	
+	<br>
+	
+	<% 
 	out.print(list.get(i).getcon());	
 	
 	out.println("<br>");
 	out.println("<br>");
+	out.println("<br>");
+	out.println(list.get(i).getuse());
+	out.println("<br>");
+	out.println("<Strong>" + list.get(i).getuser() + "</Strong>");
+	
 	out.println("<br>");
 	
 

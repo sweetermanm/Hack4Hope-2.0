@@ -16,8 +16,9 @@ printPosts();
 //findUserByUsername("te");
 //getNumUsefulPost(1);
 //getNumUsefulComment(1);
-getPasswordByUserID(1);
-getNumPosts();
+//getPasswordByUserID(1);
+//getNumPosts();
+//findUserbyID(1);
 }
 public static void connectToDB() {
 conn = null;
@@ -25,7 +26,7 @@ try {
     //DB parameters
     String url       = "jdbc:mysql://66.116.150.183:3306/eogotwa_h4hProject";
     String user      = "eogotwa_EmmaK";
-    String password  = "Password01";
+    String password  = "Password02";
    
     //create a connection to the database
     conn = DriverManager.getConnection(url, user, password);
@@ -78,8 +79,9 @@ Statement stmt = conn.createStatement();
 ResultSet rs = stmt.executeQuery("SELECT * FROM `eogotwa_h4hProject`.`Post`");
    
 while(rs.next()){
-   
-Post p = new Post(rs.getInt("postID"), rs.getString("title"),rs.getString("pContent"));
+String username = findUserbyID(rs.getInt("pUserID"));
+//System.out.println(username);
+Post p = new Post(rs.getInt("postID"), rs.getString("title"),rs.getString("pContent"),rs.getInt("useful"),username);
 plist.add(p);
 }
 }
@@ -96,12 +98,12 @@ connectToDB();
 clist.clear();
 try {
 Statement stmt = conn.createStatement();
-ResultSet rs = stmt.executeQuery("SELECT u.username, c.cContent FROM `eogotwa_h4hProject`.`Comment` c "
+ResultSet rs = stmt.executeQuery("SELECT u.username, c.cContent,c.commentID,c.useful FROM `eogotwa_h4hProject`.`Comment` c "
 + "INNER JOIN `eogotwa_h4hProject`.`User` u ON u.ID = c.cUserID WHERE cPostID =" + id);
    
 while(rs.next()){
    
-Comment c = new Comment(rs.getString("u.username"),rs.getString("cContent"));
+Comment c = new Comment(rs.getString("u.username"),rs.getString("cContent"),rs.getInt("commentID"), rs.getInt("useful"));
 System.out.println(rs.getString("u.username"));
 System.out.println(rs.getString("c.cContent"));
 clist.add(c);
@@ -132,6 +134,25 @@ closeConnection();
 //System.out.println(id);
 return id;
 }
+
+public static String findUserbyID(int id) {
+String username = "";
+connectToDB();
+try {
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery("SELECT username FROM `eogotwa_h4hProject`.`User` WHERE ID = " + id);
+while(rs.next()){
+username = rs.getString("username");
+}
+}
+catch(SQLException e) {
+System.out.println(e);
+} 
+closeConnection();
+//System.out.println(username);
+return username;
+}
+
 public static String getPasswordByUserID(int uID) {
 String pass = "";
 connectToDB();

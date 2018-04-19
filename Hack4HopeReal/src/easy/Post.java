@@ -22,6 +22,21 @@ public class Post
 		pid = id; 
 		
 	}
+	public Post(int id, String intitle, String incontent, int inuseful) {
+		title = intitle; 
+		content = incontent;
+		pid = id; 
+		useful = inuseful;
+		
+	}
+	public Post(int id, String intitle, String incontent, int inuseful,String inusername) {
+		title = intitle; 
+		content = incontent;
+		pid = id; 
+		useful = inuseful;
+		username = inusername;
+	}
+
 	public Post(int inuseful, String inuser, boolean inrep) {
 		useful = inuseful;
 		username = inuser; 
@@ -43,7 +58,17 @@ public class Post
 		username = inuse; 
 		
 		
+		
 	}
+	
+	public void getuse(int inid) {
+		
+		
+		useful = inid; 
+	}
+	
+	
+	
 	public int getuse() {
 		return useful; 
 		

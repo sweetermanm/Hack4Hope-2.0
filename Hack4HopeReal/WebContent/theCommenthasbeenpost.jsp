@@ -18,14 +18,17 @@
   String title = request.getParameter("PID");
 	
   String content = request.getParameter("Commentcontent");
+
+  String incontent = easy.sortings.vulgarcheck(content);
+  
   
   int pid = Integer.valueOf(String.valueOf(title));
 %>
 
-<%easy.call.insertComments(usn,pid,content); %>
+<%easy.call.insertComments(usn,pid,incontent); %>
 
 
-
+<% response.sendRedirect("HomePage.jsp"); %>
 
 
 </body>
