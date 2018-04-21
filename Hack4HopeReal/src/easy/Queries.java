@@ -76,12 +76,34 @@ connectToDB();
 plist.clear();
 try {
 Statement stmt = conn.createStatement();
-ResultSet rs = stmt.executeQuery("SELECT * FROM `eogotwa_h4hProject`.`Post`");
+ResultSet rs = stmt.executeQuery("SELECT a.*, b.username FROM `eogotwa_h4hProject`.`Post` a "
+		+ "INNER JOIN `eogotwa_h4hProject`.`User` b ON a.pUserID = b.ID");
    
 while(rs.next()){
-String username = findUserbyID(rs.getInt("pUserID"));
-//System.out.println(username);
-Post p = new Post(rs.getInt("postID"), rs.getString("title"),rs.getString("pContent"),rs.getInt("useful"),username);
+//System.out.println(rs.getString("b.username"));
+Post p = new Post(rs.getInt("a.postID"), rs.getString("a.title"),rs.getString("a.pContent"),rs.getInt("a.useful"),rs.getString("b.username"));
+plist.add(p);
+}
+}
+catch(SQLException e) {
+System.out.println(e);
+} 
+closeConnection();
+return plist;
+}
+
+public static List<Post> printPostsOnUseful() 
+{
+connectToDB();
+plist.clear();
+try {
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery("SELECT a.*, b.username FROM `eogotwa_h4hProject`.`Post` a "
+		+ "INNER JOIN `eogotwa_h4hProject`.`User` b ON a.pUserID = b.ID ORDER BY a.useful DESC");
+   
+while(rs.next()){
+//System.out.println(rs.getString("b.username"));
+Post p = new Post(rs.getInt("a.postID"), rs.getString("a.title"),rs.getString("a.pContent"),rs.getInt("a.useful"),rs.getString("b.username"));
 plist.add(p);
 }
 }

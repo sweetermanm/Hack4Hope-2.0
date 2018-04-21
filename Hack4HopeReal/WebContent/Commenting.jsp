@@ -69,17 +69,23 @@ Will be building view comments soo
 <br>
 <br>
 <br>
+<%
 
 	
-<form action="theCommenthasbeenpost.jsp" method="get">
-Username <input type = "text" name = "usn"><br>
-PostID  <input type="text" name="PID"><br>
-Commentcontent: <input type="text" name="Commentcontent"><br>
+out.println("<form action=theCommenthasbeenpost.jsp method=get>");
 
+out.println("Username <input type = text name = usn><br>");
+out.println("PostID  <input value =" +  postid + " name=PID><br>");
+out.println("Commentcontent: <input type=text name=Comment content><br>");
+
+out.println("<input type=submit>");
+out.println("</form>");
+
+
+
+%>
 <p>
 <br>
-<input type="submit">
-</form>
 
 
 
