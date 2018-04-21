@@ -5,48 +5,100 @@
 
 <html>
 <head>
-<style>
-a{
-border:1px solid slategray;
-background-color: lightgray;
-color: black;
-margin:75px;
-padding: 20px;
-}
-</style>
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="main.css" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bungee Inline' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+
+
 <title>Sign Up Page</title>
 
-<a href="PostPage.jsp" ;>Post Page</a>
-<a href="HomePage.jsp" >Home Page</a>
-<img src="h4h.png"  float:right;float:left;width="100" height="100">
 
-<a href="LogInPage.jsp">Login Page</a>
-<a href="SignupPage.jsp">SignUp Page</a>
 </head>
 <br>
 <br>
 <br>
 <%//Created by Nick Stone  %>
-<body background = "Gray.jpg">
+<body background>
+<div class="sidebar">
+<img src="h4h.png"width="200" height="200";>
+<a href="PostPage.jsp" ;>Post Page</a>
+<a href="HomePage.jsp" >Home Page</a>
 
+
+<a href="LogInPage.jsp">Login Page</a>
+<a href="SignupPage.jsp">SignUp Page</a>
+</div>
+
+<div class="posts">
+<h1>Sign Up</h1>
 <form action="CallingDb(signup).jsp" method="get">
-Username: <input type ="text" name ="username"><br>
-FirstName: <input type="text" name="firstName"><br>
-LastName:  <input type="text" name="lastName"><br>
-DOB:    	   <input type="text" name="DOB"><br>
-password:  <input type="text" name = "pass"><br>
-email:     <input type = "text" name = "email"><br>
-  
 
-<p>
+<div>
+
+<label>Username:</label>
+
+<input type="text" name="username">
+
+</div>
+
+
+<div>
+
+<label>First Name:</label>
+
+<input type="text" name="firstName">
+
+</div>
+
+
+<div>
+
+<label>Last Name:</label>
+
+<input type="text" name="lastName">
+
+</div>
+
+
+<div>
+
+<label>Date of Birth:</label>
+
+<input type="text" name="DOB">
+
+</div>
+
+
+<div>
+
+<label>Password:</label>
+
+<input type="text" name="pass">
+
+</div>
+
+
+<div>
+
+<label>Email Address:</label>
+
+<input type="text" name="email">
+
+</div>
 
 <br>
-<input type="submit">
 
+
+<input type="submit">
 
 
 </form>
 
+
+</div>
 </body>
 </html>

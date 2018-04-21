@@ -10,19 +10,23 @@
 
 <head>
 
-<link rel="stylesheet" type="text/css" href="formatting.css">
+
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="NewFile.css" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bungee Inline' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
 
-<title>Insert title here</title>
+<title>Hack4Hope</title>
+
 
 </head>
 
 
 <body>
-
-<div class="TopNavigation">
+<div class="sidebar">
 
 <br>
 
@@ -36,10 +40,12 @@
 
 <a href="SignupPage.jsp">SignUp Page</a>
 
-<h1>Hack4Hope Community Forum</h1>
 
 </div>
 
+<div class="posts">
+
+<h1>Hack4Hope Community Forum</h1>
 
 <%
 
@@ -81,7 +87,7 @@ Hello <%= user %>
 
 The password you entered is <%= pass %>
 
-
+</div>
 </body>
 
 </html>
