@@ -9,7 +9,10 @@
 <body>
 
 
+<%int postid = Integer.parseInt(request.getParameter("ID")); 
 
+out.println(postid);
+ %>
 
 <% 
   response.sendRedirect("HomePage.jsp");

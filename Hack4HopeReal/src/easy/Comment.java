@@ -89,7 +89,10 @@ public class Comment {
 		
 		
 	}
-	
+	public int getcid() {
+		return cid; 
+		
+	}
 	
 	
 	

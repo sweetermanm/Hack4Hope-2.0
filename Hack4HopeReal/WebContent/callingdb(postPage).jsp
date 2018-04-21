@@ -28,6 +28,11 @@ padding: 20px;
  <br>
 <br>
 <br>
+ 
+	
+	
+	
+	
 <%
 //Created By Nick stone 
   String Username = request.getParameter("Username");
@@ -36,6 +41,7 @@ padding: 20px;
   
   
 %>
+
 <% String incontent = easy.sortings.vulgarcheck(content);                %>
 
 

@@ -11,7 +11,7 @@ static int count = 0;
 static List<Comment> clist = new ArrayList<Comment>();
 public static void main(String args[]) {
 //printUsers();
-printPosts();
+//printPosts();
 //printComments(1);
 //findUserByUsername("te");
 //getNumUsefulPost(1);

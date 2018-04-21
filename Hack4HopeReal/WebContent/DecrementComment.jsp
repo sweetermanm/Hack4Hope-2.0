@@ -7,15 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+int postid = Integer.parseInt(request.getParameter("IDf")); 
+int posti = Integer.parseInt(request.getParameter("lol"));
+	out.println(postid);
+	%>
 
-<% easy.call.decrementUsefulComment(2);%>
+<% easy.call.decrementUsefulComment(postid);%>
 
 
 
 
 <%
     //String hi = "HomePage.jsp";
-    response.sendRedirect("Viewcomments.jsp");
+    response.sendRedirect("Viewcomments.jsp?ID=" + posti);
 %>
 
 

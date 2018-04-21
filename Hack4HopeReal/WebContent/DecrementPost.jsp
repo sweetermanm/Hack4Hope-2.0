@@ -8,8 +8,11 @@
 </head>
 <body>
 
+<%int postid = Integer.parseInt(request.getParameter("ID")); 
 
-<% easy.call.decrementUsefulPost(1);%>
+	out.println(postid);
+	%>
+<% easy.call.decrementUsefulPost(postid);%>
 
 
 

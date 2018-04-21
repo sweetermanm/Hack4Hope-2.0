@@ -105,20 +105,34 @@ for(int i = 0; i < max;i++){
 	<br>
 	
 	<br>
-	<a href = "Incrementpost.jsp")>Useful!</a>	
+	<%
+	out.println("<a href = Incrementpost.jsp?ID=" +plist.get(i).getID() +  " >Useful!</a>");	
+	
+	
+	
+	%>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br><%
+	out.println("<a href = deletePost.jsp?ID=" +plist.get(i).getID()  + " > Delete Post!</a>");
+	%>
+	
+	
+	
+	
+	
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
-	<a href = "deletePost.jsp"> Delete Post!</a>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<a href = "DecrementPost.jsp")>Not Useful</a>	
- 
+	<%
+	
+	
+	out.println("<a href = DecrementPost.jsp?ID=" +plist.get(i).getID() + " >Not Useful</a>");	
+ %>
 	<% 
 	out.println("<Strong>"  + plist.get(i).getuse() + "</Strong>");
 	out.println("<br>");
@@ -130,11 +144,11 @@ for(int i = 0; i < max;i++){
 	out.println("<br>");
 	out.println("<br>");
 	out.println("<Strong>" +  plist.get(i).getID() + "</Strong>");
-	out.println("<a href= Commenting.jsp >Comment on this post </a>");
+	out.println("<a href= Commenting.jsp?ID=" +plist.get(i).getID() + " >Comment on this post </a>");
 	out.println("<br>");
 	out.println("<br>");
 	out.println("<br>");
-	out.println("<a href= Viewcomments.jsp >View all comments </a>");
+	out.println("<a href= Viewcomments.jsp?ID=" +plist.get(i).getID() + " >View all comments </a>");
 	out.println("<br>");
 	out.println("<br>");
 	out.println("<br>");

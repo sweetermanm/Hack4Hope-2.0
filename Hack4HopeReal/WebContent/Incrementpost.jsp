@@ -7,14 +7,17 @@
 <title></title>
 </head>
 <body>
+<%int postid = Integer.parseInt(request.getParameter("ID")); 
 
-<% easy.call.incrementUsefulPost(1);%>
+	out.println(postid); %>
+	
+<% easy.call.incrementUsefulPost(postid);%>
 
 
 
 
 <%
-   // String hi = "HomePage.jsp";
+   
     response.sendRedirect("HomePage.jsp");
 %>
 

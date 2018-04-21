@@ -25,8 +25,17 @@ padding: 20px;
 
 
 
-
-
+<br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
 
 There will be a form here to enter in and we should autopopulate the Post id. 
 
@@ -35,8 +44,33 @@ COuld easily send that to this page from the home page.
 Will be building view comments soo 
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<% int postid = Integer.parseInt(request.getParameter("ID")); 
 
+	out.println(postid);
+	
+	
+	
+	
+	
+	%>
+	
+	
+	<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+	
 <form action="theCommenthasbeenpost.jsp" method="get">
 Username <input type = "text" name = "usn"><br>
 PostID  <input type="text" name="PID"><br>
