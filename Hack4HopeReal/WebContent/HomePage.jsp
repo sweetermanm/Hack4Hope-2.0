@@ -7,44 +7,51 @@
 <%@page import = "easy.Post" %>
 <html>
 <head>
+<style>
+p{
+	color: black; 
+	
+	
+}
+body{
 
+background-color: purple; 
+
+
+
+}
+e{
+	color: Blue;
+
+}
+a{
+border:1px solid steelgray;
+background-color: lightsteelblue;
+color: black;
+margin:75px;
+padding: 20px;
+}
+
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Hack4Hope Home Page</title>
-<link rel="stylesheet" href="main.css" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Bungee Inline' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+<title>Hack4Hope Home Pagetitle </title>
+<a href="PostPage.jsp" ;>Post Page</a>
+<a href="HomePage.jsp" >Home Page</a>
+<img src="h4h.png"  float:right;float:left;width="100" height="100">
 
+<a href="LogInPage.jsp">Login Page</a>
+<a href="SignupPage.jsp">SignUp Page</a>
 </head>
 <br>
 <br>
 <br>
 <%//Created By Nick Stone %>
 <body>
+<p>
+please for the love of god work
+</p>
 
-
-
-<div class="sidebar">
-
-<br>
-
-<img src="h4h.png" width="200" height="200";>
-
-<a href="PostPage.jsp">Post Page</a>
-
-<a href="HomePage.jsp">Home Page</a>
-
-<a href="LogInPage.jsp">Login Page</a>
-
-<a href="SignupPage.jsp">SignUp Page</a>
-
-</div>
-
-
-<div class="posts">
-<br>
-
-<h1>Hack4Hope Community Forum</h1>
+<p> Hello World</p>
 
 
 <%
@@ -65,73 +72,89 @@
  
  %>
 
+<br>
+<br>
+<br>
+<p>
+Just testing
+All this stufff out 
+you know how it goes
+</p>
+<br>
+<br>
+<br>
 
 <%//This works... Cant believe it does. Dont want to gloat but i am very good 
 // at coding 
 String testing = "Commenting.jsp";
 String viewing = "Viewcomments.jsp";
-String voting = "votes.jsp";
 
 
 %>
-  
+<p>
 
- <% int max = easy.Queries.getNumPosts();
+<% 
+	int max = easy.Queries.getNumPosts();
 
 	
 for(int i = 0; i < max;i++){
 
-	
-
+	out.println("<br>");
+	out.println(plist.get(i).getcon());
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<br>");
 	%>
-       <table align="center">
- <tr>
-    <th colspan= "4"><% %>username:
-     <br>
-     <%out.println(plist.get(i).getcon()); %>
-    <th>
-  </tr>   
-  <tr>
-    <td><% out.println("<a href= Commenting.jsp >Comment on this post </a>"); %></td>
-    <td><% out.println("<a href= Viewcomments.jsp >View all comments </a>"); %></td>
-    <td><% out.println("<Strong>" +  plist.get(i).getID() + "</Strong>"); %></td>
-    <td><%out.println("<a href=votes.jsp>useful </a>"); %></td>
-  </tr>
-
-</table> 
-
-
-
-	<script  type="text/javascript">
+	<br>
 	
+	<br>
+	<%
+	out.println("<a href = Incrementpost.jsp?ID=" +plist.get(i).getID() +  " >Useful!</a>");	
 	
-	var votes = 0;
-    function up() {
-        votes= votes +1;
-        document.getElementById("votes").innerHTML = votes;
-    }
-    function down() {
-    	if(votes > 0){
-    	votes= votes -1;
-    	document.getElementById("votes").innerHTML = votes;
-    	}
-    	};
-	
-	
-	</script>
-	
-	<% //int p = votes;
 	
 	
 	%>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br><%
+	out.println("<a href = deletePost.jsp?ID=" +plist.get(i).getID()  + " > Delete Post!</a>");
+	%>
 	
 	
+	
+	
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<%
 	
 	
+	out.println("<a href = DecrementPost.jsp?ID=" +plist.get(i).getID() + " >Not Useful</a>");	
+ %>
+	<% 
+	out.println("<Strong>"  + plist.get(i).getuse() + "</Strong>");
 	out.println("<br>");
 	out.println("<br>");
 	
+	out.println("<Strong>"  + plist.get(i).getuser() + "</Strong>");
+	
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<Strong>" +  plist.get(i).getID() + "</Strong>");
+	out.println("<a href= Commenting.jsp?ID=" +plist.get(i).getID() + " >Comment on this post </a>");
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<a href= Viewcomments.jsp?ID=" +plist.get(i).getID() + " >View all comments </a>");
+	out.println("<br>");
+	out.println("<br>");
+	out.println("<br>");
 	
 	
 	}
@@ -139,8 +162,11 @@ for(int i = 0; i < max;i++){
 	
 	
 %>
-
-</div>
+</p>
+<br>
+<br>
+<br>
+<%//out.println(easy.sortings.getg()); %>
 
 </body>
 </html>

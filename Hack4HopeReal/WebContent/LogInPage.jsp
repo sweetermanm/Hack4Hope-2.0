@@ -6,29 +6,23 @@
 
 <html>
 
-
+<link rel="stylesheet" type="text/css" href="formatting.css">
 
 
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="main.css" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Bungee Inline' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
+
 <title>Login Page</title>
 
 </head>
 
 
-
-
-<body>
-<div class="sidebar">
+<div class="TopNavigation">
 
 <br>
 
-<img src="h4h.png"width="200" height="200";>
+<img src="h4h.png" alt="H4H logo" width="125" height="125">
 
 <a href="PostPage.jsp">Post Page</a>
 
@@ -38,59 +32,48 @@
 
 <a href="SignupPage.jsp">SignUp Page</a>
 
-
+<h1>Hack4Hope Community Forum</h1>
 
 </div>
 
 
-<br>
+<body>
 
 <br>
 
 <br>
 
-<div class="posts">
+<br>
 
-<h1>Hack4Hope Login</h1>
 
 <form action="Callingdb(login).jsp" method="get">
 
-
 <div>
-
 
 <label>Username: &nbsp;</label>
 
-
 <input type="text" name="username">
 
-
 </div>
-
 
 <div>
 
-
 <label>Password: &nbsp;</label>
-
 
 <input type="text" name="pass">
 
-
 </div>
-
 
 <br>
 
-
 <input type="submit">
-
 
 </form>
 
 
 
-</div>
+
+
 
 </body>
 

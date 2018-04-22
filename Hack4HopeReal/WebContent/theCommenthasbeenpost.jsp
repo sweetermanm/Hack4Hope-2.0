@@ -8,30 +8,28 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="NewFile.css" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Bungee Inline' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
-
 <title>Your Comment Has Been Posted!</title>
 </head>
-<body>
-<div class="posts">
+<body background = Gray.jpg>
+
 <%
 //Created By Nick stone 
   String usn = request.getParameter("usn");
   String title = request.getParameter("PID");
 	
   String content = request.getParameter("Commentcontent");
+
+  String incontent = easy.sortings.vulgarcheck(content);
+  
   
   int pid = Integer.valueOf(String.valueOf(title));
 %>
 
-<%easy.call.insertComments(usn,pid,content); %>
+<%easy.call.insertComments(usn,pid,incontent); %>
 
 
+<% response.sendRedirect("HomePage.jsp"); %>
 
 
-</div>
 </body>
 </html>

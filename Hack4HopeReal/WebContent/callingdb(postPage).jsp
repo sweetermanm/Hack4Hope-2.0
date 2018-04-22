@@ -6,27 +6,33 @@
 <%@page import = "easy.User" %>
 <html>
 <head>
-
+<style>
+a{
+border:1px solid slategray;
+background-color: lightgray;
+color: black;
+margin:75px;
+padding: 20px;
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="NewFile.css" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Bungee Inline' rel='stylesheet'>
-<link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
 <title>Your Post has been Posted</title>
-<div class="sidebar">
-<img src="h4h.png" >
 <a href="PostPage.jsp" >Post Page</a>
 <a href="HomePage.jsp" >Home Page</a>
+<img src="h4h.png"  float:right;float:left;width="100" height="100">
+
 <a href="LogInPage.jsp">Login Page</a>
 <a href="SignupPage.jsp">SignUp Page</a>
-</div>
 </head>
-<body>
-<div class="posts">
+<body background = "Gray.jpg">
  <br>
+<br>
+<br>
  
-<br>
-<br>
+	
+	
+	
+	
 <%
 //Created By Nick stone 
   String Username = request.getParameter("Username");
@@ -36,15 +42,16 @@
   
 %>
 
+<% String incontent = easy.sortings.vulgarcheck(content);                %>
 
 
-<% easy.call.insertPosts(Username, title, content); %>
+<% easy.call.insertPosts(Username, title, incontent); %>
 
 
 <%easy.onejavaToRuleThemAll.addp(title,content); %>
 Hello the post <%=title%> has been posted to the Home Page
 
-Your post was <%=content %>
-</div>
+Your post was <%=incontent %>
+
 </body>
 </html>
