@@ -34,12 +34,17 @@ padding: 20px;
   String dob = request.getParameter("DOB");
   String pass = request.getParameter("pass");
   String email = request.getParameter("email");
+  String bio = request.getParameter("bio");
 %>
 
 
 <%//final static List<User>// list = new ArrayList<User>();   %>
 <% List<User> list = new ArrayList<User>(); %>
-<%  %>
+<% 
+	String color = easy.sortings.generatecolor();
+
+
+%>
 <%easy.call.insertUsers(username,firstName,lastname,dob,pass,email); %>
 <%list = easy.Queries.printUsers(); %>
 

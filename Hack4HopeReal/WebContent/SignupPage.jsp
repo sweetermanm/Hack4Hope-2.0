@@ -37,7 +37,7 @@ LastName:  <input type="text" name="lastName"><br>
 DOB:    	   <input type="text" name="DOB"><br>
 password:  <input type="text" name = "pass"><br>
 email:     <input type = "text" name = "email"><br>
-  
+Biography: 	<input type = "text" name = "bio">
 
 <p>
 
