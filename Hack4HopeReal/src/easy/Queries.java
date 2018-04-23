@@ -11,14 +11,13 @@ static int count = 0;
 static List<Comment> clist = new ArrayList<Comment>();
 public static void main(String args[]) {
 //printUsers();
-//printPosts();
+printPosts();
 //printComments(1);
 //findUserByUsername("te");
 //getNumUsefulPost(1);
 //getNumUsefulComment(1);
-//getPasswordByUserID(1);
-//getNumPosts();
-//findUserbyID(1);
+getPasswordByUserID(1);
+getNumPosts();
 }
 public static void connectToDB() {
 conn = null;
@@ -26,7 +25,7 @@ try {
     //DB parameters
     String url       = "jdbc:mysql://66.116.150.183:3306/eogotwa_h4hProject";
     String user      = "eogotwa_EmmaK";
-    String password  = "Password02";
+    String password  = "Password01";
    
     //create a connection to the database
     conn = DriverManager.getConnection(url, user, password);
@@ -76,34 +75,11 @@ connectToDB();
 plist.clear();
 try {
 Statement stmt = conn.createStatement();
-ResultSet rs = stmt.executeQuery("SELECT a.*, b.username FROM `eogotwa_h4hProject`.`Post` a "
-		+ "INNER JOIN `eogotwa_h4hProject`.`User` b ON a.pUserID = b.ID");
+ResultSet rs = stmt.executeQuery("SELECT * FROM `eogotwa_h4hProject`.`Post`");
    
 while(rs.next()){
-//System.out.println(rs.getString("b.username"));
-Post p = new Post(rs.getInt("a.postID"), rs.getString("a.title"),rs.getString("a.pContent"),rs.getInt("a.useful"),rs.getString("b.username"));
-plist.add(p);
-}
-}
-catch(SQLException e) {
-System.out.println(e);
-} 
-closeConnection();
-return plist;
-}
-
-public static List<Post> printPostsOnUseful() 
-{
-connectToDB();
-plist.clear();
-try {
-Statement stmt = conn.createStatement();
-ResultSet rs = stmt.executeQuery("SELECT a.*, b.username FROM `eogotwa_h4hProject`.`Post` a "
-		+ "INNER JOIN `eogotwa_h4hProject`.`User` b ON a.pUserID = b.ID ORDER BY a.useful DESC");
    
-while(rs.next()){
-//System.out.println(rs.getString("b.username"));
-Post p = new Post(rs.getInt("a.postID"), rs.getString("a.title"),rs.getString("a.pContent"),rs.getInt("a.useful"),rs.getString("b.username"));
+Post p = new Post(rs.getInt("postID"), rs.getString("title"),rs.getString("pContent"));
 plist.add(p);
 }
 }
@@ -120,12 +96,12 @@ connectToDB();
 clist.clear();
 try {
 Statement stmt = conn.createStatement();
-ResultSet rs = stmt.executeQuery("SELECT u.username, c.cContent,c.commentID,c.useful FROM `eogotwa_h4hProject`.`Comment` c "
+ResultSet rs = stmt.executeQuery("SELECT u.username, c.cContent FROM `eogotwa_h4hProject`.`Comment` c "
 + "INNER JOIN `eogotwa_h4hProject`.`User` u ON u.ID = c.cUserID WHERE cPostID =" + id);
    
 while(rs.next()){
    
-Comment c = new Comment(rs.getString("u.username"),rs.getString("cContent"),rs.getInt("commentID"), rs.getInt("useful"));
+Comment c = new Comment(rs.getString("u.username"),rs.getString("cContent"));
 System.out.println(rs.getString("u.username"));
 System.out.println(rs.getString("c.cContent"));
 clist.add(c);
@@ -156,25 +132,6 @@ closeConnection();
 //System.out.println(id);
 return id;
 }
-
-public static String findUserbyID(int id) {
-String username = "";
-connectToDB();
-try {
-Statement stmt = conn.createStatement();
-ResultSet rs = stmt.executeQuery("SELECT username FROM `eogotwa_h4hProject`.`User` WHERE ID = " + id);
-while(rs.next()){
-username = rs.getString("username");
-}
-}
-catch(SQLException e) {
-System.out.println(e);
-} 
-closeConnection();
-//System.out.println(username);
-return username;
-}
-
 public static String getPasswordByUserID(int uID) {
 String pass = "";
 connectToDB();

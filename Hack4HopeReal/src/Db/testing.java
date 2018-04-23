@@ -13,7 +13,7 @@ try {
     // db parameters
     String url       = "jdbc:mysql://66.116.150.183:3306/eogotwa_h4hProject";
     String user      = "eogotwa_EmmaK";
-    String password  = "Password02";
+    String password  = "Password01";
  
     // create a connection to the database
     conn = DriverManager.getConnection(url, user, password);

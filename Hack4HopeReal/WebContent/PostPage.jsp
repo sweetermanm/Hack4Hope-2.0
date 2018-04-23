@@ -35,6 +35,7 @@ Post a message to the forum here!.
 Username: <input type="text" name="Username"><br>
 postTitle: <input type ="text" name ="PostTitle"><br>
 Postcontent: <input type="text" name="Postcontent"><br>
+Postlink: <input type="url" name="Posturl"><br>
 
 <p>
 <br>

@@ -28,30 +28,24 @@ padding: 20px;
  <br>
 <br>
 <br>
- 
-	
-	
-	
-	
 <%
 //Created By Nick stone 
   String Username = request.getParameter("Username");
   String title = request.getParameter("PostTitle");
   String content = request.getParameter("Postcontent");
-  
+  String url = request.getParamete("Posturl");  
   
 %>
 
-<% String incontent = easy.sortings.vulgarcheck(content);                %>
 
 
-<% easy.call.insertPosts(Username, title, incontent); %>
+<% easy.call.insertPosts(Username, title, content); %>
 
 
 <%easy.onejavaToRuleThemAll.addp(title,content); %>
 Hello the post <%=title%> has been posted to the Home Page
 
-Your post was <%=incontent %>
+Your post was <%=content %>
 
 </body>
 </html>

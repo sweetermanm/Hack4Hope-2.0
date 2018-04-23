@@ -8,7 +8,6 @@ public class Comment {
     private boolean report;
 	private String title; 
 	private String content; 
-	private int cid; 
 	
 	public Comment() {
 		
@@ -19,27 +18,11 @@ public class Comment {
 		content = incontent; 
 		
 	}
-	public Comment(String inuser, String incontent,int incid, int inuse) {
-		username = inuser; 
-		content = incontent; 
-		cid = incid;
-		useful = inuse; 
-	}
 	public Comment(int inuseful, String inuser, boolean inrep,  int inpid) {
 		useful = inuseful;
 		username = inuser; 
 		report = inrep; 
 		postID = inpid; 
-		
-		
-		
-	}
-	public Comment(int inuseful, String inuser, boolean inrep,  int inpid,int incid) {
-		useful = inuseful;
-		username = inuser; 
-		report = inrep; 
-		postID = inpid; 
-		cid = incid; 
 		
 		
 		
@@ -89,10 +72,7 @@ public class Comment {
 		
 		
 	}
-	public int getcid() {
-		return cid; 
-		
-	}
+	
 	
 	
 	

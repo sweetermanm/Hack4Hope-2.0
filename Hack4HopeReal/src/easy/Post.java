@@ -12,31 +12,18 @@ public class Post
 	private String title;
 	private String content;
 	private int pid;
+	private String link;
 	public Post(String intitle, String incontent) {
 		title = intitle; 
 		content = incontent;
 	}
-	public Post(int id, String intitle, String incontent) {
+	public Post(int id, String intitle, String incontent, String inlink) {
 		title = intitle; 
 		content = incontent;
 		pid = id; 
+		link = inlink;
 		
 	}
-	public Post(int id, String intitle, String incontent, int inuseful) {
-		title = intitle; 
-		content = incontent;
-		pid = id; 
-		useful = inuseful;
-		
-	}
-	public Post(int id, String intitle, String incontent, int inuseful,String inusername) {
-		title = intitle; 
-		content = incontent;
-		pid = id; 
-		useful = inuseful;
-		username = inusername;
-	}
-
 	public Post(int inuseful, String inuser, boolean inrep) {
 		useful = inuseful;
 		username = inuser; 
@@ -58,17 +45,7 @@ public class Post
 		username = inuse; 
 		
 		
-		
 	}
-	
-	public void getuse(int inid) {
-		
-		
-		useful = inid; 
-	}
-	
-	
-	
 	public int getuse() {
 		return useful; 
 		
@@ -91,6 +68,9 @@ public class Post
 		return pid;
 	}
 	
+	public String getlink(){
+		return inlink;
+	}
 	
 	public String Populate() {
 		
@@ -99,6 +79,8 @@ public class Post
 		
 		
 	}
+	
+
 	
 	
 	
