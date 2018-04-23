@@ -68,6 +68,33 @@ public class sortings {
 		list.add("fuck");
 		list.add("ass");
 		list.add("shit");
+		//added by Roslyn Davis
+		list.add("fart");
+		list.add("titty");
+		list.add("dumb");
+		list.add("retard");
+		list.add("retarded");
+		list.add("dummy");
+		list.add("shutup");
+		list.add("stupid");
+		list.add("cock");
+		list.add("pussy");
+		list.add("crap");
+		list.add("cunt");
+		list.add("whore");
+		list.add("fag");
+		list.add("douche");
+		list.add("piss");
+		list.add("slut");
+		list.add("asshole");
+		list.add("sex");
+		list.add("porn");
+		list.add("masterbate");
+		list.add("terrorist");
+		list.add("nigger");
+		list.add("nigga");
+		list.add("twat")
+		
 //		list.add("SHIT");
 //		list.add("ASS");
 //		list.add("SHit");
