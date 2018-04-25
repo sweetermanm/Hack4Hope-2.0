@@ -1,4 +1,7 @@
 # Hack4Hope-2.0
+
+Website link: http://testingh4h-env.us-east-2.elasticbeanstalk.com/HomePage.jsp
+
 Private Repository for the Hack4Hope project. 
 CSCI 260-01 Team Project. Original Idea by Emma Krummenacher. Project completed by: Emma Krummenacher, Nicholas Stone, Matthew Sweeterman, Morgan Bradford, and Rosyln Davis. 
 
