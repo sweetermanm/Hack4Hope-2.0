@@ -1,0 +1,107 @@
+@charset "ISO-8859-1";
+
+ body{
+        font-family: 'Amatic SC';font-size: 22px;
+        color: #083378;
+        background-color:#E1E3F2;
+        opacity: 50%;
+    }
+    h1{
+    	text-align: center;
+        font-family: 'Bungee Shade';font-size: 45px;
+    }
+    form{
+		margin: 0 auto;
+		width : 400px;
+		border-color: black;
+    }
+label{
+	font: bold;
+	display:inline-block;
+	width:200px;
+	text-aligh:right;
+}
+.sidebar {
+    font-family: 'Bungee Inline';font-size: 22px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #083378;
+    padding-top: 20px;
+}
+.sidebar a {
+    padding:6px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #E1E3F2;
+    display: block;
+    text-align: center;
+}
+.posts {
+	text-align: center;
+    margin-left: 200px; 
+    font-size: 28px; 
+    padding: 0px 10px;
+    }
+.search .search-container {
+  float: right;
+}
+.search input[type=text] {
+  font-family: 'Amatic SC';font-size: 22px;
+    font: bold;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 18px;
+  border: 0;
+}
+.search .search-container button {
+  float: right;
+  padding: 14px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 18px;
+  border-bottom-color: aliceblue;
+  
+}
+.search .search-container button:hover {
+    
+  background: #ccc;
+    background-image: C:/Users/morgan/Desktop/programing/cs_peter/look.png;
+}
+table {
+	    width: 50%;
+  
+    }
+
+    th{ 
+    width: 100%;
+    font-family: 'Amatic SC';font-size: 30px;
+    text-align: center;
+        
+    }
+    td {
+    width:25%;
+    font-family: 'Amatic SC';font-size: 22px;
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2
+
+}
+
+.userColor{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.userColor2{
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
